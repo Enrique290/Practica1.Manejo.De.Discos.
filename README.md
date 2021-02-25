@@ -70,3 +70,36 @@ Usamos el comando **_df –h_** otra vez y podemos verificar que la USB ya apare
 Para desmontar la USB entramos nuevamente al modo root y ahí pondremos el comando **_umount /dev/sdb1_**.
 
 Salimos del modo root y ponemos los comandos **_ls_** cd USB y **_ls_** para poder verificar que la USB ha sido desmontada.
+
+![Imagen2.5](https://github.com/Enrique290/Practica1.Manejo.De.Discos./blob/main/ImagenesSO/Imagen1.jpg)
+
+También podemos usar el comando **_df -h_** para verificar que la USB ha sido desmontada.
+
+![Imagen2.6](https://github.com/Enrique290/Practica1.Manejo.De.Discos./blob/main/ImagenesSO/Imagen1.jpg)
+
+## 3. Enlistar la información de los dispositivos de bloque conectados, aunque no estén montados en terminal.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
