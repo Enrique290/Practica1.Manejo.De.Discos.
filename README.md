@@ -128,9 +128,15 @@ En **_fdisk_** escribimos el comando **_p_** para imprimir la tabla de particion
 
 ![6.2](https://github.com/Enrique290/Practica1.Manejo.De.Discos./blob/main/ImagenesSO/Imagen1.jpg)
 
+Después ponemos el comando **_d_** para borrar las particiones (como solo tenemos esa partición se selecciona y se borra automáticamente).
+
 ![6.3](https://github.com/Enrique290/Practica1.Manejo.De.Discos./blob/main/ImagenesSO/Imagen1.jpg)
 
+Usamos el comando **_w_** para guardar los cambios.
+
 ![6.4](https://github.com/Enrique290/Practica1.Manejo.De.Discos./blob/main/ImagenesSO/Imagen1.jpg)
+
+Volvemos entrar al modo **_fdisk_** y ponemos **_p_** para ver la tabla de particiones y poder verificar que la partición se ha borrado.
 
 ![6.5](https://github.com/Enrique290/Practica1.Manejo.De.Discos./blob/main/ImagenesSO/Imagen1.jpg)
 
