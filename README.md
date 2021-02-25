@@ -49,51 +49,51 @@ Abrimos la terminal de Linux.
 Una vez ahí utilizaremos el comando **_df -h_** para poder visualizar la USB y asegurarnos que la USB no
 esté montada.
 
-![2.1](https://github.com/Enrique290/Practica1.Manejo.De.Discos./blob/main/ImagenesSO/1.png)
+![2.1](https://github.com/Enrique290/Practica1.Manejo.De.Discos./blob/main/ImagenesSO/2.1.png)
 
 Para empezar a montar la USB primero utilizaremos el comando **_mkdir_** para crear una carpeta con el nombre de USB (esta será la carpeta en donde se montará la USB).
 
 Después utilizaremos el comando **_ls_** para poder visualizar que la carpeta USB ha sido creada.
 
-![2.2](https://github.com/Enrique290/Practica1.Manejo.De.Discos./blob/main/ImagenesSO/Imagen1.jpg)
+![2.2](https://github.com/Enrique290/Practica1.Manejo.De.Discos./blob/main/ImagenesSO/2.2.png)
 
 Utilizaremos el comando **_sudo -i_** para entrar al modo root para tener privilegios (nos pedirá contraseña) y ahí aplicar el comando **_mount /dev/sdb1_** y la dirección de la carpeta USB como se puede ver en la imagen.
 
 Salimos del modo root y ponemos los comandos **ls cd usb** y **ls** para ahí poder ver la información que contiene nuestra USB montada.
 
-![2.3](https://github.com/Enrique290/Practica1.Manejo.De.Discos./blob/main/ImagenesSO/Imagen1.jpg)
+![2.3](https://github.com/Enrique290/Practica1.Manejo.De.Discos./blob/main/ImagenesSO/2.3.png)
 
 Usamos el comando **_df –h_** otra vez y podemos verificar que la USB ya aparece lo cual significa que ya está montada.
 
-![2.4](https://github.com/Enrique290/Practica1.Manejo.De.Discos./blob/main/ImagenesSO/Imagen1.jpg)
+![2.4](https://github.com/Enrique290/Practica1.Manejo.De.Discos./blob/main/ImagenesSO/2.4.png)
 
 Para desmontar la USB entramos nuevamente al modo root y ahí pondremos el comando **_umount /dev/sdb1_**.
 
 Salimos del modo root y ponemos los comandos **_ls_** cd USB y **_ls_** para poder verificar que la USB ha sido desmontada.
 
-![2.5](https://github.com/Enrique290/Practica1.Manejo.De.Discos./blob/main/ImagenesSO/Imagen1.jpg)
+![2.5](https://github.com/Enrique290/Practica1.Manejo.De.Discos./blob/main/ImagenesSO/2.5.png)
 
 También podemos usar el comando **_df -h_** para verificar que la USB ha sido desmontada.
 
-![2.6](https://github.com/Enrique290/Practica1.Manejo.De.Discos./blob/main/ImagenesSO/Imagen1.jpg)
+![2.6](https://github.com/Enrique290/Practica1.Manejo.De.Discos./blob/main/ImagenesSO/2.6.png)
 
 ## 3. Enlistar la información de los dispositivos de bloque conectados, aunque no estén montados en terminal.
 
 Para poder enlistar la información de los dispositivos de bloque conectados que están y no están montados usamos el comando **_lsblk_**.
 
-![3.1](https://github.com/Enrique290/Practica1.Manejo.De.Discos./blob/main/ImagenesSO/Imagen1.jpg)
+![3.1](https://github.com/Enrique290/Practica1.Manejo.De.Discos./blob/main/ImagenesSO/3.1.png)
 
 Podemos desplegar diferentes tipos de tablas dependiendo de la letra que le agreguemos al comando **_lsblk_** como se muestra a continuación:
    **lsblk -a:** muestra los dispositivos vacíos.
    **lsblk -b:** muestra el tamaño de cada dispositivo en bytes.
    **lsblk -d:** Imprime los dispositivos de bloque titulares y no las particiones.
 
-![3.2](https://github.com/Enrique290/Practica1.Manejo.De.Discos./blob/main/ImagenesSO/Imagen1.jpg)
+![3.2](https://github.com/Enrique290/Practica1.Manejo.De.Discos./blob/main/ImagenesSO/3.2.png)
 
    **lsblk -d:** muestra la tabla de permisos.
    **lsblk -o:** muestra una tabla personalizada de los dispositivos de bloque.
 
-![3.3](https://github.com/Enrique290/Practica1.Manejo.De.Discos./blob/main/ImagenesSO/Imagen1.jpg)
+![3.3](https://github.com/Enrique290/Practica1.Manejo.De.Discos./blob/main/ImagenesSO/3.3.png)
 
 ## 4. Mostrar la tabla de particiones del disco donde está instalado el sistema operativo en terminal.
 
@@ -101,20 +101,20 @@ Primero ponemos el comando **_sudo -i_** para entrar al modo root y tener privil
 
 Ponemos el comando **_fdisk -l_** para mostrar la tabla de particiones del disco donde esta instalados el sistema operativo.
 
-![4.1](https://github.com/Enrique290/Practica1.Manejo.De.Discos./blob/main/ImagenesSO/Imagen1.jpg)
+![4.1](https://github.com/Enrique290/Practica1.Manejo.De.Discos./blob/main/ImagenesSO/4.1.png)
 
-![4.2](https://github.com/Enrique290/Practica1.Manejo.De.Discos./blob/main/ImagenesSO/Imagen1.jpg)
+![4.2](https://github.com/Enrique290/Practica1.Manejo.De.Discos./blob/main/ImagenesSO/4.2.png)
 
 ## 5. Conectar una memoria usb (“usb”) y mostrar su tabla de particiones en terminal (hacer Respaldo antes porque se va a borrar toda la información dentro del usb en pasos posteriores).
 
 Una vez conectada la USB ponemos el comando **_fdisk -l /dev/sdb_** para poder visualizar la tabla de
 particiones de la USB en terminal.
 
-![5.1](https://github.com/Enrique290/Practica1.Manejo.De.Discos./blob/main/ImagenesSO/Imagen1.jpg)
+![5.1](https://github.com/Enrique290/Practica1.Manejo.De.Discos./blob/main/ImagenesSO/5.1.png)
 
 También podemos utilizar los comandos **_fdisk -l /dev/sda_** y **_fdisk -l /dev/sdb1_** y ahí poder visualizar una tabla de partición más específica.
 
-![5.2](https://github.com/Enrique290/Practica1.Manejo.De.Discos./blob/main/ImagenesSO/Imagen1.jpg)
+![5.2](https://github.com/Enrique290/Practica1.Manejo.De.Discos./blob/main/ImagenesSO/5.2.png)
 
 ## 6. Borrar todas las particiones del “usb” en terminal.
 
@@ -122,23 +122,23 @@ Primero ponemos el comando **_sudo -i_** para entrar al modo root y tener privil
 
 Para borrar las particiones de la USB primero debemos de usar el comando **_fdisk /dev/sdb_** para entrar al modo **_fdisk_**.
 
-![6.1](https://github.com/Enrique290/Practica1.Manejo.De.Discos./blob/main/ImagenesSO/Imagen1.jpg)
+![6.1](https://github.com/Enrique290/Practica1.Manejo.De.Discos./blob/main/ImagenesSO/6.1.png)
 
 En **_fdisk_** escribimos el comando **_p_** para imprimir la tabla de particiones y ahí podemos observar que existe una partición.
 
-![6.2](https://github.com/Enrique290/Practica1.Manejo.De.Discos./blob/main/ImagenesSO/Imagen1.jpg)
+![6.2](https://github.com/Enrique290/Practica1.Manejo.De.Discos./blob/main/ImagenesSO/6.2.png)
 
 Después ponemos el comando **_d_** para borrar las particiones (como solo tenemos esa partición se selecciona y se borra automáticamente).
 
-![6.3](https://github.com/Enrique290/Practica1.Manejo.De.Discos./blob/main/ImagenesSO/Imagen1.jpg)
+![6.3](https://github.com/Enrique290/Practica1.Manejo.De.Discos./blob/main/ImagenesSO/6.3.png)
 
 Usamos el comando **_w_** para guardar los cambios.
 
-![6.4](https://github.com/Enrique290/Practica1.Manejo.De.Discos./blob/main/ImagenesSO/Imagen1.jpg)
+![6.4](https://github.com/Enrique290/Practica1.Manejo.De.Discos./blob/main/ImagenesSO/6.4.png)
 
 Volvemos entrar al modo **_fdisk_** y ponemos **_p_** para ver la tabla de particiones y poder verificar que la partición se ha borrado.
 
-![6.5](https://github.com/Enrique290/Practica1.Manejo.De.Discos./blob/main/ImagenesSO/Imagen1.jpg)
+![6.5](https://github.com/Enrique290/Practica1.Manejo.De.Discos./blob/main/ImagenesSO/6.5.png)
 
 ## 7. Crear en el “usb” tres particiones físicas y una extendida en terminal.
 
@@ -146,7 +146,7 @@ Primero ponemos el comando **_sudo -i_** para entrar al modo root y tener privil
 
 Ponemos el comando **_fdisk /dev/sbd_** para entrar al modo fdisk.
 
-![7.1](https://github.com/Enrique290/Practica1.Manejo.De.Discos./blob/main/ImagenesSO/Imagen1.jpg)
+![7.1](https://github.com/Enrique290/Practica1.Manejo.De.Discos./blob/main/ImagenesSO/7.1.png)
 
 Una vez ahí ponemos el comando **_n_** para agregar una nueva partición.
 
@@ -158,15 +158,15 @@ En last sector le damos el valor de memoria que le queramos asignar a la partici
 
 Los cuatro pasos anteriores se pueden ver en la siguiente imagen:
 
-![7.2](https://github.com/Enrique290/Practica1.Manejo.De.Discos./blob/main/ImagenesSO/Imagen1.jpg)
+![7.2](https://github.com/Enrique290/Practica1.Manejo.De.Discos./blob/main/ImagenesSO/7.2.png)
 
 Escribimos **_p_** para desplegar la tabla de particiones y verificar que la partición se ha creado
 
-![7.3](https://github.com/Enrique290/Practica1.Manejo.De.Discos./blob/main/ImagenesSO/Imagen1.jpg)
+![7.3](https://github.com/Enrique290/Practica1.Manejo.De.Discos./blob/main/ImagenesSO/7.3.png)
 
 Repetimos este paso hasta tener 3 particiones físicas (en nuestro caso las 3 particiones son de +1024M) y después escribimos el comando p pata verificar que se crearon las 3 particiones físicas.
 
-![7.4](https://github.com/Enrique290/Practica1.Manejo.De.Discos./blob/main/ImagenesSO/Imagen1.jpg)
+![7.4](https://github.com/Enrique290/Practica1.Manejo.De.Discos./blob/main/ImagenesSO/7.4.png)
 
 Una vez creada las 3 particiones físicas escribimos el comando **_n_** para crear una nueva partición y escribimos el comando **_e_** ya que en este la cuarta partición será extendida.
 
@@ -178,11 +178,11 @@ En last sector le damos el valor de memoria que le queramos asignar a la partici
 
 Los cuatro pasos anteriores se pueden ver aquí:
 
-![7.5](https://github.com/Enrique290/Practica1.Manejo.De.Discos./blob/main/ImagenesSO/Imagen1.jpg)
+![7.5](https://github.com/Enrique290/Practica1.Manejo.De.Discos./blob/main/ImagenesSO/7.5.png)
 
 Ponemos **_p_** para imprimir la tabla de particiones y ahí veremos que se han creado las 3 particiones físicas y una extendida.
 
-![7.6](https://github.com/Enrique290/Practica1.Manejo.De.Discos./blob/main/ImagenesSO/Imagen1.jpg)
+![7.6](https://github.com/Enrique290/Practica1.Manejo.De.Discos./blob/main/ImagenesSO/7.6.png)
 
 Escribimos **_w_** para guardar los cambios.
 
@@ -192,7 +192,7 @@ Primero ponemos el comando **_sudo -i_** para entrar al modo root y tener privil
 
 Ponemos el comando **_fdisk /dev/sbd_** para entrar al modo fdisk.
 
-![8.1](https://github.com/Enrique290/Practica1.Manejo.De.Discos./blob/main/ImagenesSO/Imagen1.jpg)
+![8.1](https://github.com/Enrique290/Practica1.Manejo.De.Discos./blob/main/ImagenesSO/8.1.png)
 
 Una vez ahí ponemos el comando **_n_** para agregar una nueva partición (en este caso será una partición lógica porque tiene que ser una partición dentro de la partición extendia).
 
@@ -204,11 +204,11 @@ En last sector le damos el valor de memoria que le queramos asignar a la partici
 
 Los cuatro pasos anteriores se pueden ver aquí:
 
-![8.2](https://github.com/Enrique290/Practica1.Manejo.De.Discos./blob/main/ImagenesSO/Imagen1.jpg)
+![8.2](https://github.com/Enrique290/Practica1.Manejo.De.Discos./blob/main/ImagenesSO/8.2.png)
 
 Ponemos **_p_** para imprimir la tabla de particiones y ahí veremos que ya tenemos 5 particiones.
 
-![8.3](https://github.com/Enrique290/Practica1.Manejo.De.Discos./blob/main/ImagenesSO/Imagen1.jpg)
+![8.3](https://github.com/Enrique290/Practica1.Manejo.De.Discos./blob/main/ImagenesSO/8.3.png)
 
 Sabemos que la partición 5 (la lógica) esta dentro de la extendida porque si nos fijamos en los sectores la partición 5 está dentro del sector de la partición extendida.
 
@@ -220,33 +220,33 @@ Primero abrimos la interfaz gráfica disks.
 
 Una vez ahí seleccionamos nuestra USB en la parte de la izquierda y podemos notar que ahí se ve gráficamente todas las particiones que hemos creado anteriormente.
 
-![9.1](https://github.com/Enrique290/Practica1.Manejo.De.Discos./blob/main/ImagenesSO/Imagen1.jpg)
+![9.1](https://github.com/Enrique290/Practica1.Manejo.De.Discos./blob/main/ImagenesSO/9.1.png)
 
 Una vez ahí eliminamos todas las particiones excepto una.
 
 Para eliminar le damos al símbolo de menos y le damos eliminar partición.
 
-![9.2](https://github.com/Enrique290/Practica1.Manejo.De.Discos./blob/main/ImagenesSO/Imagen1.jpg)
+![9.2](https://github.com/Enrique290/Practica1.Manejo.De.Discos./blob/main/ImagenesSO/9.2.png)
 
 Presionamos eliminar.
 
-![9.3](https://github.com/Enrique290/Practica1.Manejo.De.Discos./blob/main/ImagenesSO/Imagen1.jpg)
+![9.3](https://github.com/Enrique290/Practica1.Manejo.De.Discos./blob/main/ImagenesSO/9.3.png)
 
 Repetimos este procedimiento hasta dejar solo una partición (en nuestro caso solo dejamos la partición 2).
 
 Con la partición que dejamos, apretamos el botón de ajustes y le damos a al botón de redimensionar.
 
-![9.4](https://github.com/Enrique290/Practica1.Manejo.De.Discos./blob/main/ImagenesSO/Imagen1.jpg)
+![9.4](https://github.com/Enrique290/Practica1.Manejo.De.Discos./blob/main/ImagenesSO/9.4.png)
 
 En redimensionar tenemos una opción que se llama tamaño actual, esa opción la tenemos que subir al máximo para que abarque toda la USB.
 
-![9.5](https://github.com/Enrique290/Practica1.Manejo.De.Discos./blob/main/ImagenesSO/Imagen1.jpg)
+![9.5](https://github.com/Enrique290/Practica1.Manejo.De.Discos./blob/main/ImagenesSO/9.5.png)
 
-![9.6](https://github.com/Enrique290/Practica1.Manejo.De.Discos./blob/main/ImagenesSO/Imagen1.jpg)
+![9.6](https://github.com/Enrique290/Practica1.Manejo.De.Discos./blob/main/ImagenesSO/9.6.png)
 
 Apretamos el botón rojo de la arriba a la derecha que dice redimensionar y podemos observar que ahora nuestra partición 2 ocupa todo el espacio de nuestra USB.
 
-![9.7](https://github.com/Enrique290/Practica1.Manejo.De.Discos./blob/main/ImagenesSO/Imagen1.jpg)
+![9.7](https://github.com/Enrique290/Practica1.Manejo.De.Discos./blob/main/ImagenesSO/9.7.png)
 
 ## 10. Copiar un archivo .iso de distribución live de linux a la usb por medio del comando "dd".
 
@@ -254,29 +254,29 @@ Primero descargamos un archivo .iso de la distribución de linux en nuestro caso
 
 Una vez hecho esto utilizamos el comando **_df -h_** para verificar que la USB no esté montada.
 
-![10.1](https://github.com/Enrique290/Practica1.Manejo.De.Discos./blob/main/ImagenesSO/Imagen1.jpg)
+![10.1](https://github.com/Enrique290/Practica1.Manejo.De.Discos./blob/main/ImagenesSO/10.1.png)
 
 Una vez que la verifiquemos que la USB no está montada ponemos el comando **_sudo -i_** para entrar al modo root y tener privilegios.
 
 Una vez ahí utilizaremos un comando dd que se muestra en la imagen para copiar un archivo .iso a nuestra USB.
 
-![10.2](https://github.com/Enrique290/Practica1.Manejo.De.Discos./blob/main/ImagenesSO/Imagen1.jpg)
+![10.2](https://github.com/Enrique290/Practica1.Manejo.De.Discos./blob/main/ImagenesSO/10.2.png)
 
 Esperamos a que se copie le archivo .iso esto puede tardar varios minutos.
 
 Cuando se termine de copiar usamos el comando **_mount /dev/sdb1_** y la dirección de nuestra carpeta en donde queremos que se monte la USB.
 
-![10.3](https://github.com/Enrique290/Practica1.Manejo.De.Discos./blob/main/ImagenesSO/Imagen1.jpg)
+![10.3](https://github.com/Enrique290/Practica1.Manejo.De.Discos./blob/main/ImagenesSO/10.3.png)
 
 Una vez hecho esto él .iso ha sido copiado y lo podemos verificar de 2 maneras.
 
 La primera es saliendo del modo root y utilizando los comandos **_cd usb_** y **_ls_** para verificar que el archivo gentoo.iso esta dentro de la carpeta USB
 
-![10.4](https://github.com/Enrique290/Practica1.Manejo.De.Discos./blob/main/ImagenesSO/Imagen1.jpg)
+![10.4](https://github.com/Enrique290/Practica1.Manejo.De.Discos./blob/main/ImagenesSO/10.4.png)
 
 La segunda forma es entrando a la interfaz disks y entrando a la carpeta que creamos llamada USB y ahí podremos ver que se copió él archivo .iso.
 
-![10.5](https://github.com/Enrique290/Practica1.Manejo.De.Discos./blob/main/ImagenesSO/Imagen1.jpg)
+![10.5](https://github.com/Enrique290/Practica1.Manejo.De.Discos./blob/main/ImagenesSO/10.5.png)
 
 
 
