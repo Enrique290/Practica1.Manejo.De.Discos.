@@ -84,13 +84,17 @@ Para poder enlistar la información de los dispositivos de bloque conectados que
 ![3.1](https://github.com/Enrique290/Practica1.Manejo.De.Discos./blob/main/ImagenesSO/3.1.png)
 
 Podemos desplegar diferentes tipos de tablas dependiendo de la letra que le agreguemos al comando **_lsblk_** como se muestra a continuación:
+
    **lsblk -a:** muestra los dispositivos vacíos.
+   
    **lsblk -b:** muestra el tamaño de cada dispositivo en bytes.
+   
    **lsblk -d:** Imprime los dispositivos de bloque titulares y no las particiones.
 
 ![3.2](https://github.com/Enrique290/Practica1.Manejo.De.Discos./blob/main/ImagenesSO/3.2.png)
 
    **lsblk -d:** muestra la tabla de permisos.
+   
    **lsblk -o:** muestra una tabla personalizada de los dispositivos de bloque.
 
 ![3.3](https://github.com/Enrique290/Practica1.Manejo.De.Discos./blob/main/ImagenesSO/3.3.png)
@@ -115,6 +119,8 @@ particiones de la USB en terminal.
 También podemos utilizar los comandos **_fdisk -l /dev/sda_** y **_fdisk -l /dev/sdb1_** y ahí poder visualizar una tabla de partición más específica.
 
 ![5.2](https://github.com/Enrique290/Practica1.Manejo.De.Discos./blob/main/ImagenesSO/5.2.png)
+
+![5.3](https://github.com/Enrique290/Practica1.Manejo.De.Discos./blob/main/ImagenesSO/5.2.png)
 
 ## 6. Borrar todas las particiones del “usb” en terminal.
 
