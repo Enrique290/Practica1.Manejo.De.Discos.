@@ -44,3 +44,8 @@ Puede entregar aplicaciones y escritorios virtuales basados en distribuciones RH
 
 
 ## 2. ¿Cómo montar y desmontar un USB en el sistema por terminal?
+Abrimos la terminal de Linux.
+
+Una vez ahí utilizaremos el comando **df -h** para poder visualizar la USB y asegurarnos que la USB no
+esté montada.
+
