@@ -46,22 +46,27 @@ Puede entregar aplicaciones y escritorios virtuales basados en distribuciones RH
 ## 2. ¿Cómo montar y desmontar un USB en el sistema por terminal?
 Abrimos la terminal de Linux.
 
-Una vez ahí utilizaremos el comando **df -h** para poder visualizar la USB y asegurarnos que la USB no
+Una vez ahí utilizaremos el comando **_df -h_** para poder visualizar la USB y asegurarnos que la USB no
 esté montada.
 
 ![Imagen1](https://github.com/Enrique290/Practica1.Manejo.De.Discos./blob/main/ImagenesSO/Imagen1.jpg)
 
-Para empezar a montar la USB primero utilizaremos el comando **mkdir** para crear una carpeta con el nombre de USB (esta será la carpeta en donde se montará la USB).
+Para empezar a montar la USB primero utilizaremos el comando **_mkdir_** para crear una carpeta con el nombre de USB (esta será la carpeta en donde se montará la USB).
 
-Después utilizaremos el comando **ls** para poder visualizar que la carpeta USB ha sido creada.
+Después utilizaremos el comando **_ls_** para poder visualizar que la carpeta USB ha sido creada.
 
 ![Imagen2](https://github.com/Enrique290/Practica1.Manejo.De.Discos./blob/main/ImagenesSO/Imagen1.jpg)
 
-Utilizaremos el comando **sudo -i** para entrar al modo root para tener privilegios (nos pedirá contraseña) y ahí aplicar el comando **mount /dev/sdb1** y la dirección de la carpeta USB como se puede ver en la imagen.
+Utilizaremos el comando **_sudo -i_** para entrar al modo root para tener privilegios (nos pedirá contraseña) y ahí aplicar el comando **_mount /dev/sdb1_** y la dirección de la carpeta USB como se puede ver en la imagen.
 
+Salimos del modo root y ponemos los comandos **ls cd usb** y **ls** para ahí poder ver la información que contiene nuestra USB montada.
 
+![Imagen3](https://github.com/Enrique290/Practica1.Manejo.De.Discos./blob/main/ImagenesSO/Imagen1.jpg)
 
+Usamos el comando **_df –h_** otra vez y podemos verificar que la USB ya aparece lo cual significa que ya está montada.
 
+![Imagen4](https://github.com/Enrique290/Practica1.Manejo.De.Discos./blob/main/ImagenesSO/Imagen1.jpg)
 
+Para desmontar la USB entramos nuevamente al modo root y ahí pondremos el comando **_umount /dev/sdb1_**.
 
-
+Salimos del modo root y ponemos los comandos **_ls_** cd USB y ls para poder verificar que la USB ha sido desmontada.
