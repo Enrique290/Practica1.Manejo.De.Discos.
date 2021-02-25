@@ -140,6 +140,144 @@ Volvemos entrar al modo **_fdisk_** y ponemos **_p_** para ver la tabla de parti
 
 ![6.5](https://github.com/Enrique290/Practica1.Manejo.De.Discos./blob/main/ImagenesSO/Imagen1.jpg)
 
+## 7. Crear en el “usb” tres particiones físicas y una extendida en terminal.
+
+Primero ponemos el comando **_sudo -i_** para entrar al modo root y tener privilegios.
+
+Ponemos el comando **_fdisk /dev/sbd_** para entrar al modo fdisk.
+
+![7.1](https://github.com/Enrique290/Practica1.Manejo.De.Discos./blob/main/ImagenesSO/Imagen1.jpg)
+
+Una vez ahí ponemos el comando **_n_** para agregar una nueva partición.
+
+En tipo de partición escribimos el comando **_p_** por que será una partición física.
+
+En donde dice primer sector le damos Enter para poner el valor predeterminado.
+
+En last sector le damos el valor de memoria que le queramos asignar a la partición en nuestro caso le asignamos **_+1024M_**.
+
+Los cuatro pasos anteriores se pueden ver en la siguiente imagen:
+
+![7.2](https://github.com/Enrique290/Practica1.Manejo.De.Discos./blob/main/ImagenesSO/Imagen1.jpg)
+
+Escribimos **_p_** para desplegar la tabla de particiones y verificar que la partición se ha creado
+
+![7.3](https://github.com/Enrique290/Practica1.Manejo.De.Discos./blob/main/ImagenesSO/Imagen1.jpg)
+
+Repetimos este paso hasta tener 3 particiones físicas (en nuestro caso las 3 particiones son de +1024M) y después escribimos el comando p pata verificar que se crearon las 3 particiones físicas.
+
+![7.4](https://github.com/Enrique290/Practica1.Manejo.De.Discos./blob/main/ImagenesSO/Imagen1.jpg)
+
+Una vez creada las 3 particiones físicas escribimos el comando **_n_** para crear una nueva partición y escribimos el comando **_e_** ya que en este la cuarta partición será extendida.
+
+En tipo de partición escribimos el comando **_e_** porque será una partición física.
+
+En donde dice primer sector le damos Enter para poner el valor predeterminado.
+
+En last sector le damos el valor de memoria que le queramos asignar a la partición en nuestro caso le asignamos **_+1024M_**.
+
+Los cuatro pasos anteriores se pueden ver aquí:
+
+![7.5](https://github.com/Enrique290/Practica1.Manejo.De.Discos./blob/main/ImagenesSO/Imagen1.jpg)
+
+Ponemos **_p_** para imprimir la tabla de particiones y ahí veremos que se han creado las 3 particiones físicas y una extendida.
+
+![7.6](https://github.com/Enrique290/Practica1.Manejo.De.Discos./blob/main/ImagenesSO/Imagen1.jpg)
+
+Escribimos **_w_** para guardar los cambios.
+
+## 8. Crear una partición dentro de la partición extendida del “usb” en terminal.
+
+Primero ponemos el comando **_sudo -i_** para entrar al modo root y tener privilegios (nos pedirá nuestra contraseña).
+
+Ponemos el comando **_fdisk /dev/sbd_** para entrar al modo fdisk.
+
+![8.1](https://github.com/Enrique290/Practica1.Manejo.De.Discos./blob/main/ImagenesSO/Imagen1.jpg)
+
+Una vez ahí ponemos el comando **_n_** para agregar una nueva partición (en este caso será una partición lógica porque tiene que ser una partición dentro de la partición extendia).
+
+Como en este caso ya tenemos 4 particiones se creará automáticamente una quinta partición que será lógica.
+
+En donde dice primer sector le damos Enter para poner el valor predeterminado.
+
+En last sector le damos el valor de memoria que le queramos asignar a la partición en nuestro caso le asignamos **_+256M_**.
+
+Los cuatro pasos anteriores se pueden ver aquí:
+
+![8.2](https://github.com/Enrique290/Practica1.Manejo.De.Discos./blob/main/ImagenesSO/Imagen1.jpg)
+
+Ponemos **_p_** para imprimir la tabla de particiones y ahí veremos que ya tenemos 5 particiones.
+
+![8.3](https://github.com/Enrique290/Practica1.Manejo.De.Discos./blob/main/ImagenesSO/Imagen1.jpg)
+
+Sabemos que la partición 5 (la lógica) esta dentro de la extendida porque si nos fijamos en los sectores la partición 5 está dentro del sector de la partición extendida.
+
+Escribimos **_w_** para guardar.
+
+## 9. En la interfaz gráfica de la aplicación disks, borrar las particiones para que sólo exista una partición que abarque toda la “usb”.
+
+Primero abrimos la interfaz gráfica disks.
+
+Una vez ahí seleccionamos nuestra USB en la parte de la izquierda y podemos notar que ahí se ve gráficamente todas las particiones que hemos creado anteriormente.
+
+![9.1](https://github.com/Enrique290/Practica1.Manejo.De.Discos./blob/main/ImagenesSO/Imagen1.jpg)
+
+Una vez ahí eliminamos todas las particiones excepto una.
+
+Para eliminar le damos al símbolo de menos y le damos eliminar partición.
+
+![9.2](https://github.com/Enrique290/Practica1.Manejo.De.Discos./blob/main/ImagenesSO/Imagen1.jpg)
+
+Presionamos eliminar.
+
+![9.3](https://github.com/Enrique290/Practica1.Manejo.De.Discos./blob/main/ImagenesSO/Imagen1.jpg)
+
+Repetimos este procedimiento hasta dejar solo una partición (en nuestro caso solo dejamos la partición 2).
+
+Con la partición que dejamos, apretamos el botón de ajustes y le damos a al botón de redimensionar.
+
+![9.4](https://github.com/Enrique290/Practica1.Manejo.De.Discos./blob/main/ImagenesSO/Imagen1.jpg)
+
+En redimensionar tenemos una opción que se llama tamaño actual, esa opción la tenemos que subir al máximo para que abarque toda la USB.
+
+![9.5](https://github.com/Enrique290/Practica1.Manejo.De.Discos./blob/main/ImagenesSO/Imagen1.jpg)
+
+![9.6](https://github.com/Enrique290/Practica1.Manejo.De.Discos./blob/main/ImagenesSO/Imagen1.jpg)
+
+Apretamos el botón rojo de la arriba a la derecha que dice redimensionar y podemos observar que ahora nuestra partición 2 ocupa todo el espacio de nuestra USB.
+
+![9.7](https://github.com/Enrique290/Practica1.Manejo.De.Discos./blob/main/ImagenesSO/Imagen1.jpg)
+
+## 10. Copiar un archivo .iso de distribución live de linux a la usb por medio del comando "dd".
+
+Primero descargamos un archivo .iso de la distribución de linux en nuestro caso fue el Gentoo.
+
+Una vez hecho esto utilizamos el comando **_df -h_** para verificar que la USB no esté montada.
+
+![10.1](https://github.com/Enrique290/Practica1.Manejo.De.Discos./blob/main/ImagenesSO/Imagen1.jpg)
+
+Una vez que la verifiquemos que la USB no está montada ponemos el comando **_sudo -i_** para entrar al modo root y tener privilegios.
+
+Una vez ahí utilizaremos un comando dd que se muestra en la imagen para copiar un archivo .iso a nuestra USB.
+
+![10.2](https://github.com/Enrique290/Practica1.Manejo.De.Discos./blob/main/ImagenesSO/Imagen1.jpg)
+
+Esperamos a que se copie le archivo .iso esto puede tardar varios minutos.
+
+Cuando se termine de copiar usamos el comando **_mount /dev/sdb1_** y la dirección de nuestra carpeta en donde queremos que se monte la USB.
+
+![10.3](https://github.com/Enrique290/Practica1.Manejo.De.Discos./blob/main/ImagenesSO/Imagen1.jpg)
+
+Una vez hecho esto él .iso ha sido copiado y lo podemos verificar de 2 maneras.
+
+La primera es saliendo del modo root y utilizando los comandos **_cd usb_** y **_ls_** para verificar que el archivo gentoo.iso esta dentro de la carpeta USB
+
+![10.4](https://github.com/Enrique290/Practica1.Manejo.De.Discos./blob/main/ImagenesSO/Imagen1.jpg)
+
+La segunda forma es entrando a la interfaz disks y entrando a la carpeta que creamos llamada USB y ahí podremos ver que se copió él archivo .iso.
+
+![10.5](https://github.com/Enrique290/Practica1.Manejo.De.Discos./blob/main/ImagenesSO/Imagen1.jpg)
+
 
 
 
